@@ -1,93 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Chasm Studios</title>
-		<style>
-/* Reset some browser styles */
-		* {
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-		}
+  <head>
+    <meta charset="UTF-8">
+    <title>Chasm Studios</title>
+    <style>
+    @font-face {
+      font-family: 'ClashGrotesk-Extralight';
+      src: url('./fonts/ClashGrotesk-Extralight.woff2') format('woff2'),
+      url('./fonts/ClashGrotesk-Extralight.woff') format('woff'),
+      url('./fonts/ClashGrotesk-Extralight.ttf') format('truetype');
+      font-weight: 200;
+      font-display: swap;
+      font-style: normal;
+    }
+    @font-face {
+    font-family: 'ClashGrotesk-Light';
+    src: url('./fonts/ClashGrotesk-Light.woff2') format('woff2'),
+      url('./fonts/ClashGrotesk-Light.woff') format('woff'),
+      url('./fonts/ClashGrotesk-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'ClashGrotesk-Regular';
+    src: url('./fonts/ClashGrotesk-Regular.woff2') format('woff2'),
+    url('./fonts/ClashGrotesk-Regular.woff') format('woff'),
+    url('./fonts/ClashGrotesk-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'ClashGrotesk-Medium';
+    src: url('./fonts/ClashGrotesk-Medium.woff2') format('woff2'),
+    url('./fonts/ClashGrotesk-Medium.woff') format('woff'),
+    url('./fonts/ClashGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'ClashGrotesk-Semibold';
+    src: url('./fonts/ClashGrotesk-Semibold.woff2') format('woff2'),
+    url('./fonts/ClashGrotesk-Semibold.woff') format('woff'),
+    url('./fonts/ClashGrotesk-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'ClashGrotesk-Bold';
+    src: url('./fonts/ClashGrotesk-Bold.woff2') format('woff2'),
+    url('./fonts/ClashGrotesk-Bold.woff') format('woff'),
+    url('./fonts/ClashGrotesk-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    }
+    /**
+    * This is a variable font
+    * You can control variable axes as shown below:
+    * font-variation-settings: wght 700.0;
+    *
+    * available axes:
+    'wght' (range from 200.0 to 700.0
+    */
+    @font-face {
+    font-family: 'ClashGrotesk-Variable';
+    src: url('./fonts/ClashGrotesk-Variable.woff2') format('woff2'),
+    url('./fonts/ClashGrotesk-Variable.woff') format('woff'),
+    url('./fonts/ClashGrotesk-Variable.ttf') format('truetype');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+    }
+    /* Reset some browser styles */
 
-		html {
-			font-size: 16px;
-			line-height: 1.6;
-			-webkit-font-smoothing: antialiased;
-			text-rendering: optimizeLegibility;
-		}
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
 
-		body {
-			font-family: 'Rajdhani', sans-serif;
-			padding: 1rem;
-			background-color: #fff;
-			color: #111;
-			max-width: 40rem; /* Comfortable reading width */
-			margin: auto;      /* Center horizontally */
-		}
+    html {
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background-color : #222323;
+    color: #f0f6f0;
+    }
 
-		h1, h2, h3, h4, h5, h6 {
-			margin-top: 1.5rem;
-			margin-bottom: 0.5rem;
-			line-height: 1.25;
-		}
+    body {
+    font-family: 'Rajdhani', sans-serif;
+    padding: 1rem;
+    background-color: #fff;
+    color: #111;
+    max-width: 45rem; /* Comfortable reading width */
+    margin: auto;      /* Center horizontally */
+    background-color : #222323;
+    color: #f0f6f0
+    }
 
-		p {
-			margin-bottom: 1rem;
-		}
+    h1 {
+    font-size: 64px;
+    }
 
-		a {
-			color: #007BFF;
-			text-decoration: none;
-		}
+    h2 {
+    font-size: 48px;
+    }
 
-		a:hover {
-			text-decoration: underline;
-		}
+    h3 {
+    font-size: 40px;
+    }
 
-		div {
-			margin-top : 16px;
-			margin-bottom: 16px;
-		}
-		</style>
-	</head>
+    h4 {
+    font-size: 32px;
+    }
 
-	<header>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	</header>
+    h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+    font-family: ClashGrotesk-Regular;
+    }
 
-	<body>
-		<h1>
-			Chasm Studios
-		</h1>
-		<h4>
-			<i>Take a leap.</i>
-		</h4>
+    p {
+    font-size : 24px;
+    margin-bottom: 1rem;
+    }
 
-		<div>
-			<div>
-				<a href="https://store.steampowered.com/app/3110700/Space_War_Economy_Idle/?utm_source=studiopage">Game 1 - A fusion of ARPG itemization, permadeath economies, and logistic management</a>
-				<a href="https://store.steampowered.com/app/3606200/Space_War_Economy_Idle_Demo/?utm_source=studiopage">Demo out now!</a>
-			</div>
-		</div>
-		<div>
-			<p>Game 2 - A deck and dice based life simulator?</p>
-		</div>
-		<p>Game 3 - A family friendly split screen co-op emergency management game?</p>
-		<div>
-		</div>
-		<div>
-			<p>Game 4 - A rogue-like urban simulator?</p>
-		</div>
+    a {
+    color: #ff2961;
+    text-decoration: none;
+    }
 
-		<div>
-			<h2>Contact</h2>
-			<h4>I am looking for a partner with art skills</h4>
-			<div><a href="mailto:mike@chasmstudios.com">email</a></div>
-			<div><a href="discord:https://discord.gg/WPHvenvGeV">discord</a></div>			
-		</div>
-	</body
+    a:hover {
+      color: #ff2961;
+    text-decoration: underline;
+    }
+
+    div {
+    margin-top : 16px;
+    margin-bottom: 16px;
+    }
+    </style>
+  </head>
+
+  <header>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </header>
+
+  <body>
+    <h1>
+      <svg
+        width="100"
+        height="50"
+        viewBox="0 0 1412.5 781.66101"
+        fill="none"
+        version="1.1"
+        id="svg3"
+        sodipodi:docname="Logo_ONLY_B_Black.svg"
+        inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:svg="http://www.w3.org/2000/svg">
+        <defs
+          id="defs3" />
+        <sodipodi:namedview
+          id="namedview3"
+          pagecolor="#505050"
+          bordercolor="#ffffff"
+          borderopacity="1"
+          inkscape:showpageshadow="0"
+          inkscape:pageopacity="0"
+          inkscape:pagecheckerboard="1"
+          inkscape:deskcolor="#505050"
+          inkscape:zoom="0.76662234"
+          inkscape:cx="763.0876"
+          inkscape:cy="581.12056"
+          inkscape:window-width="2560"
+          inkscape:window-height="1371"
+          inkscape:window-x="0"
+          inkscape:window-y="0"
+          inkscape:window-maximized="1"
+          inkscape:current-layer="svg3" />
+        <path
+          d="M 688.208,547.956 604.905,781.661 H 0 L 613.763,0 Z"
+          fill="#f0f6f0"
+          id="path2" />
+        <path
+          d="M 1412.5,781.661 H 807.595 L 730.168,320.824 798.736,0 Z"
+          fill="#f0f6f0"
+          id="path3" />
+      </svg>
+      Chasm Studios
+    </h1>
+
+    <div>
+      <div>
+        <h3>
+        Space War Economy Idle
+        </h3>
+        <p>
+          A fusion of ARPG itemization, permadeath economies, and logistic management 
+        </p>
+        <p>
+            <a href="https://store.steampowered.com/app/3110700/Space_War_Economy_Idle/?utm_source=studiopage">Steam</a>
+        </p>
+        <p>
+            <a href="https://store.steampowered.com/app/3606200/Space_War_Economy_Idle_Demo/?utm_source=studiopage">Demo</a>
+        </p>
+      </div>
+      <div>
+        <h3>
+          Game 2
+        </h3>
+        <p>
+          An urban cyberpunk life simulator
+        </p>
+        <p>
+          Demo date TBA
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <h2>Contact</h2>
+      <p>I am looking for a well-rounded partner who specializes in art</p>
+      <div><p><a href="mailto:mike@chasmstudios.com">Email</a></p></div>
+      <div><p><a href="discord:https://discord.gg/WPHvenvGeV">Discord</a></p></div>
+    </div>
+  </body
 </html>
